@@ -1,2 +1,4 @@
 iverilog -o HalfAdder -c files.txt
-vvp HalfAdder
+vvp HalfAdder -lxt2
+
+# For debugging help: http://iverilog.wikia.com/wiki/GTKWAVE

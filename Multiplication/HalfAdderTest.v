@@ -5,6 +5,9 @@ module HalfAdder_Test;
 	reg b = 0;
 
 	initial begin
+	    $dumpfile("test.vcd");
+     	$dumpvars(0,HalfAdder_Test);
+     	
     	# 10 a = 0;
     	# 10 b = 0;
 
