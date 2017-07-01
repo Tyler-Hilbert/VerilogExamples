@@ -1,0 +1,14 @@
+module tb_HalfAdder;
+	wire		S, C;
+	reg			A, B;
+	
+	initial begin 
+	    $dumpfile("test.vcd");
+    	$dumpvars(0,test);
+
+		A = 1; 
+		B = 0;
+
+		$finish;
+	end
+endmodule

@@ -1,0 +1,20 @@
+module HalfAdder(A, B, S, C);
+	output		S, C;
+	input		A, B;
+
+	and			G1(C, A, B);
+	xor			(S, A, B);
+
+endmodule
+
+module tb_HalfAdder;
+	wire		S, C;
+	reg			A, B;
+	
+	initial begin 
+		A = 1; 
+		B = 0;
+
+		$finish;
+	end
+endmodule

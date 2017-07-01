@@ -1,0 +1,11 @@
+# From: http://iverilog.wikia.com/wiki/Getting_Started
+
+# To compile use:
+# iverilog -o {output file name (optional)} {filename}
+verilog -o hello hello.v
+
+# Note that using a file list is possible with the -c file.txt command.... Make sure to add a line of white space at the end of file.txt though or the last item won't compile
+
+# To run:
+# vvp {filename} 
+vvp hello
