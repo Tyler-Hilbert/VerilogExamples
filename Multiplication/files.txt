@@ -1,2 +1,2 @@
-HalfAdder.v
-HalfAdderTest.v
+Adder.v
+AdderTest.v

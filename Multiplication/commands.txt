@@ -1,5 +1,5 @@
-iverilog -o HalfAdder -c files.txt
-vvp HalfAdder -lxt2
-gtkwave HalfAdder
+iverilog -o Adder -c files.txt
+vvp Adder -lxt2
+gtkwave test.vcd
 
 # For debugging help: http://iverilog.wikia.com/wiki/GTKWAVE
