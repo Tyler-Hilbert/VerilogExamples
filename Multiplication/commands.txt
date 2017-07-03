@@ -1,5 +1,5 @@
-iverilog -o Adder -c files.txt
-vvp Adder -lxt2
+iverilog -o Multiplier -c files.txt
+vvp Multiplier -lxt2
 gtkwave test.vcd
 
 # For debugging help: http://iverilog.wikia.com/wiki/GTKWAVE

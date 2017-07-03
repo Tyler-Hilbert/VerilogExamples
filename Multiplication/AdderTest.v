@@ -4,9 +4,9 @@ module HalfAdder_Test;
 	reg a = 0;
 	reg b = 0;
 
-	initial begin
+	initial begin          // TODO - see if I can get this to not take control of console when testing and just generate file
 	    $dumpfile("test.vcd");
-     	$dumpvars(0,HalfAdder_Test);
+     	$dumpvars(0, HalfAdder_Test);
      	
     	# 10 a = 0;
     	# 10 b = 0;
@@ -39,7 +39,7 @@ module FullAdder_Test;
 
     initial begin
         $dumpfile("full_adder_test.vcd");
-        $dumpvars(0,FullAdder_Test);
+        $dumpvars(0, FullAdder_Test);
         
         # 10 a = 0;
         # 10 b = 0;
