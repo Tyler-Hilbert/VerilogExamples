@@ -1,3 +1,5 @@
+// http://codeitdown.com/icarus-verilog-on-windows/
+
 //dff modules represents a D type flip-flop
 module dff(d,clk,q,qn);
 	input d,clk;

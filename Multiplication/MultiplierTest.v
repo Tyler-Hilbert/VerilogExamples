@@ -3,7 +3,7 @@ module Multiplier_Test;
 	reg a0=0, a1=0, b0=0, b1=0;
 
 	initial begin
-	    $dumpfile("multiplier_test.vcd");
+	    $dumpfile("test.vcd");
      	$dumpvars(0, Multiplier_Test);
      	
      	# 90 $stop;
