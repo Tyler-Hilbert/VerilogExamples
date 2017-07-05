@@ -10,5 +10,5 @@ module Multiplier (a0, a1, b0, b1, c0, c1, c2, c3);
 	HalfAdder ha0 (a1b0, a0b1, c1, ha0c);
 
 	and (a1b1, a1, b1);
-	HalfAdder ha1 (c1, a1b1, c2, c3);
+	HalfAdder ha1 (ha0c, a1b1, c2, c3);
 endmodule
