@@ -4,22 +4,15 @@ module HalfAdder_Test;
 	reg a = 0;
 	reg b = 0;
 
-	initial begin          // TODO - see if I can get this to not take control of console when testing and just generate file
+	initial begin
      	$dumpvars(0, HalfAdder_Test);
      	
-    	# 10 a = 0;
-    	# 10 b = 0;
+    	# 10 a = 0; b = 0;
+     	# 30 a = 1; b = 0;
+    	# 50 a = 0; b = 1;
+     	# 70 a = 1; b = 1;
 
-     	# 30 a = 1;
-     	# 30 b = 0;
-    	
-    	# 50 a = 0;
-    	# 50 b = 1;
-     	
-     	# 70 a = 1;
-     	# 70 b = 1;
-
-     	# 90 $stop;
+     	# 1000 $stop;
   	end
 
 	HalfAdder ha (a, b, sum, carry);
@@ -30,28 +23,23 @@ module HalfAdder_Test;
 endmodule
 
 module FullAdder_Test;
-    wire sum;
-    wire carry;
-    reg a = 0;
-    reg b = 0;
-    reg c = 0;
+    wire sum, carry; // Outputs
+    wire a, b, c; // Inputs
+    integer i;
 
     initial begin
         $dumpfile("test.vcd");
         $dumpvars(0, FullAdder_Test);
         
-        # 0 a=0; b=0; c=0;
-        # 10 a=1; b=0; c=0;
-        # 20 a=0; b=1; c=0;
-        # 30 a=1; b=1; c=0;
-        # 40 a=0; b=0; c=1;
-        # 50 a=1; b=0; c=1;
-        # 60 a=0; b=1; c=1;
-        # 70 a=1; b=1; c=1;
-        # 80 a=0; b=0; c=0;
+        for (i = 0; i < 8; i=i+1)
+            #10;
+       
 
-        # 90 $stop;
+        # 1000 $stop;
     end
+
+    assign a = i[0], b = i[1], c = i[2];
+
 
     FullAdder fa (a, b, c, sum, carry);
 
