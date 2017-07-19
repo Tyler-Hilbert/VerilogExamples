@@ -1,3 +1,11 @@
+module HalfAdderWithOperator(a, b, out[2:0]);
+	output 		[2:0]out;
+	input 		a, b;
+
+	out = a+b;
+endmodule
+
+
 module HalfAdder(A, B, S, C);
 	output		S, C;
 	input		A, B;
