@@ -1,0 +1,3 @@
+iverilog -o Codec -c files.txt
+vvp Codec -lxt2
+gtkwave test.vcd
