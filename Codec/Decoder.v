@@ -1,3 +1,5 @@
+// 3 X 8 Decoder
+
 module Decoder (x, y, z, d);
 	input x, y, z;
 	output [7:0] d;

@@ -1,2 +1,4 @@
 Decoder.v
 DecoderTest.v
+Encoder.v
+EncoderTest.v

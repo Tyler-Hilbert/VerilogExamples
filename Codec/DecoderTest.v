@@ -1,3 +1,5 @@
+// Test for 3 X 8 Decoder
+
 module DecoderTest ();
 	wire x, y, z;
 	wire [7:0] d;
