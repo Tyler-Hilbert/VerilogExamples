@@ -1,7 +1,7 @@
 // Test for 3 X 8 Decoder
 
 module DecoderTest ();
-	wire x, y, z;
+	reg x, y, z;
 	wire [7:0] d;
 
 	Decoder dec(x, y, z, d);
@@ -11,10 +11,10 @@ module DecoderTest ();
 		$dumpfile ("test.vcd");
 		$dumpvars (0, DecoderTest);
 
-		for (i = 0; i < 8; i=i+1) 
+		for (i = 0; i < 8; i=i+1) begin
+			{x, y, z} = i; 
 			# 10;
+		end
 	end
-
-	assign x = i[0], y = i[1], z = i[2];
 
 endmodule
