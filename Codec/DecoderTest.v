@@ -1,10 +1,10 @@
 // Test for 3 X 8 Decoder
 
 module DecoderTest ();
-	reg x, y, z;
-	wire [7:0] d;
+	reg [2:0] in;
+	wire [7:0] out;
 
-	Decoder dec(x, y, z, d);
+	Decoder dec(in, out);
 
 	integer i;
 	initial begin
@@ -12,7 +12,7 @@ module DecoderTest ();
 		$dumpvars (0, DecoderTest);
 
 		for (i = 0; i < 8; i=i+1) begin
-			{z, y, x} = i; 
+			{in[2], in[1], in[0]} = i; 
 			# 10;
 		end
 	end

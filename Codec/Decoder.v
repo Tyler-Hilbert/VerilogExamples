@@ -1,15 +1,15 @@
-// 3 X 8 Decoder
+// 3 in[0] 8 Decoder
 
-module Decoder (x, y, z, d);
-	input x, y, z;
+module Decoder (in, d);
+	input [2:0] in;
 	output [7:0] d;
 
-	assign d[0] = !z & !y & !x;
-	assign d[1] = !z & !y & x;
-	assign d[2] = !z & y & !x;
-	assign d[3] = !z & y & x;
-	assign d[4] = z & !y & !x;
-	assign d[5] = z & !y & x;
-	assign d[6] = z & y & !x;
-	assign d[7] = z & y & x;
+	assign d[0] = !in[2] & !in[1] & !in[0];
+	assign d[1] = !in[2] & !in[1] & in[0];
+	assign d[2] = !in[2] & in[1] & !in[0];
+	assign d[3] = !in[2] & in[1] & in[0];
+	assign d[4] = in[2] & !in[1] & !in[0];
+	assign d[5] = in[2] & !in[1] & in[0];
+	assign d[6] = in[2] & in[1] & !in[0];
+	assign d[7] = in[2] & in[1] & in[0];
 endmodule
