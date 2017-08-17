@@ -1,4 +1,4 @@
-// 3 in[0] 8 Decoder
+// 3 to 8 Decoder
 
 module Decoder (in, d);
 	input [2:0] in;

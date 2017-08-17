@@ -1,4 +1,4 @@
-// Test for 3 X 8 Decoder
+// Test for 3 to 8 Decoder
 
 module DecoderTest ();
 	reg [2:0] in;
